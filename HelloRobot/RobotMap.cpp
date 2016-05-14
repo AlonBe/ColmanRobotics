@@ -18,10 +18,10 @@ unsigned width, height;
 
 RobotMap::RobotMap()
 {
-	this->blowMap("roboticLabMap.png");
+	this->inflateMap("roboticLabMap.png");
 
 	vector<Cell> vecCells;
-	vecCells = this->GetWaypointsToGoal();
+	vecCells = this->GetpointsToTarget();
 }
 
 //Encode from raw pixels to disk with a single function call
@@ -50,7 +50,7 @@ void RobotMap::decodeOneStep(const char* filename) {
 				<< lodepng_error_text(error) << std::endl;
 }
 
-void RobotMap::blowMap(const char* filename) {
+void RobotMap::inflateMap(const char* filename) {
 		std::vector<unsigned char> image; //the raw pixels
 
 		//decode
@@ -154,11 +154,11 @@ void RobotMap::blowMap(const char* filename) {
 			//this->gridMap->PrintGrid();
 
 			// Writing png new blown map
-			encodeOneStep("BlownMap.png", newImage, width, height);
+			encodeOneStep("InflatedMap.png", newImage, width, height);
 	}
 }
 
-vector<Cell> RobotMap::GetWaypointsToGoal() {
+vector<Cell> RobotMap::GetpointsToTarget() {
 	vector<Cell> way;
 	Graph gr;
 
@@ -224,7 +224,7 @@ vector<Cell> RobotMap::GetWaypointsToGoal() {
 	std::vector<unsigned char> image; //the raw pixels
 
 	//decode
-	unsigned error = lodepng::decode(image, width, height, "BlownMap.png");
+	unsigned error = lodepng::decode(image, width, height, "InflatedMap.png");
 
 	//if there's an error, display it
 	if (error) {
@@ -445,7 +445,7 @@ vector<Cell> RobotMap::GetWaypointsToGoal() {
 		cout << endl;
 
 		// Writing png new path map
-		encodeOneStep("PathMap.png", image, width, height);
+		encodeOneStep("MapWithPath.png", image, width, height);
 	}
 
 	return way;

@@ -31,7 +31,7 @@ public:
 	RobotMap();
 	void encodeOneStep(const char* filename, std::vector<unsigned char> image, unsigned width, unsigned height);
 	void decodeOneStep(const char* filename);
-	void blowMap(const char* filename);
-	vector<Cell> GetWaypointsToGoal();
+	void inflateMap(const char* filename);
+	vector<Cell> GetpointsToTarget();
 };
 #endif /* ROBOTMAP_H_ */
