@@ -5,8 +5,8 @@
  *      Author: colman
  */
 
-#ifndef ROBOTMAP_H_
-#define ROBOTMAP_H_
+#ifndef ROBOTICMAP_H_
+#define ROBOTICMAP_H_
 #include <iostream>
 #include <vector>
 #include "GridMap.h"
@@ -22,16 +22,16 @@ using namespace std;
 #define GRID_CELL_FREE 0
 
 
-class RobotMap {
+class RoboticMap {
 
 private:
 	GridMap *gridMap;
 
 public:
-	RobotMap();
+	RoboticMap();
 	void encodeOneStep(const char* filename, std::vector<unsigned char> image, unsigned width, unsigned height);
 	void decodeOneStep(const char* filename);
 	void inflateMap(const char* filename);
 	vector<Cell> GetpointsToTarget();
 };
-#endif /* ROBOTMAP_H_ */
+#endif /* ROBOTICMAP_H_ */

@@ -9,7 +9,7 @@
 
 #include <libplayerc++/playerc++.h>
 #include <iostream>
-#include "RobotMap.h"
+#include "RoboticMap.h"
 
 using namespace PlayerCc;
 using namespace std;
@@ -18,7 +18,7 @@ int main()
 {
 
 	// Creating blown map from source map file
-	RobotMap* roboMap = new RobotMap();
+	RoboticMap* roboMap = new RoboticMap();
 
 	return 0;
 }

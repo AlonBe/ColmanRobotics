@@ -4,7 +4,7 @@
  *  Created on: Mar 30, 2015
  *      Author: colman
  */
-#include "RobotMap.h"
+#include "RoboticMap.h"
 #include "lodepng.h"
 #include "GridMap.h"
 #include "Cell.h"
@@ -16,7 +16,7 @@
 // Data members
 unsigned width, height;
 
-RobotMap::RobotMap()
+RoboticMap::RoboticMap()
 {
 	this->inflateMap("roboticLabMap.png");
 
@@ -26,7 +26,7 @@ RobotMap::RobotMap()
 
 //Encode from raw pixels to disk with a single function call
 //The image argument has width * height RGBA pixels or width * height * 4 bytes
-void RobotMap::encodeOneStep(const char* filename, std::vector<unsigned char> image,
+void RoboticMap::encodeOneStep(const char* filename, std::vector<unsigned char> image,
 		unsigned width, unsigned height) {
 	//Encode the image
 	unsigned error = lodepng::encode(filename, image, width, height);
@@ -37,7 +37,7 @@ void RobotMap::encodeOneStep(const char* filename, std::vector<unsigned char> im
 				<< lodepng_error_text(error) << std::endl;
 }
 
-void RobotMap::decodeOneStep(const char* filename) {
+void RoboticMap::decodeOneStep(const char* filename) {
 	std::vector<unsigned char> image; //the raw pixels
 	unsigned width, height;
 
@@ -50,7 +50,7 @@ void RobotMap::decodeOneStep(const char* filename) {
 				<< lodepng_error_text(error) << std::endl;
 }
 
-void RobotMap::inflateMap(const char* filename) {
+void RoboticMap::inflateMap(const char* filename) {
 		std::vector<unsigned char> image; //the raw pixels
 
 		//decode
@@ -158,7 +158,7 @@ void RobotMap::inflateMap(const char* filename) {
 	}
 }
 
-vector<Cell> RobotMap::GetpointsToTarget() {
+vector<Cell> RoboticMap::GetpointsToTarget() {
 	vector<Cell> way;
 	Graph gr;
 
