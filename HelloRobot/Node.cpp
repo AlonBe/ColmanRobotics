@@ -1,9 +1,3 @@
-/*
- * Node.cpp
- *
- *  Created on: May 11, 2016
- *      Author: user
- */
 #include <iostream>
 #include <list>
 #include <vector>

@@ -5,18 +5,14 @@ GridMap::GridMap(unsigned width, unsigned height) {
 	this->width = width;
 	this->height = height;
 
-	// creating new grid map
-	// each cell will be some pixels
 	gridMap = new int*[height];
 
-	// init grid with zeroes (white cells)
 	for (int i = 0; i < height; ++i)
 	{
 		gridMap[i] = new int[width];
-
 		for (int j = 0; j < width; ++j)
 		{
-			gridMap[i][j] = 0;
+			gridMap[i][j] = 0; // White cell
 		}
 	}
 }

@@ -1,10 +1,3 @@
-/*
- * pngUtil.h
- *
- *  Created on: Mar 30, 2015
- *      Author: colman
- */
-
 #ifndef ROBOTICMAP_H_
 #define ROBOTICMAP_H_
 #include <iostream>
@@ -34,4 +27,4 @@ public:
 	void inflateMap(const char* filename);
 	vector<Cell> GetpointsToTarget();
 };
-#endif /* ROBOTICMAP_H_ */
+#endif

@@ -1,10 +1,3 @@
-/*
- * Cell.h
- *
- *  Created on: May 11, 2016
- *      Author: user
- */
-
 #ifndef CELL_H_
 #define CELL_H_
 
@@ -22,4 +15,4 @@ public:
 	virtual ~Cell();
 };
 
-#endif /* CELL_H_ */
+#endif

@@ -1,10 +1,10 @@
 /*
- *  Second Assignment
+ *  Third Assignment
  *  -----------------
  * main.cpp
  *
- *  Created on: Apr 5, 2016
- *  Authors   :
+ * Authors: Alon Berkman 302444252, Talya Ben Haim
+ *
  */
 
 #include <libplayerc++/playerc++.h>

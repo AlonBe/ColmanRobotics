@@ -1,9 +1,3 @@
-/*
- * pngUtil.cpp
- *
- *  Created on: Mar 30, 2015
- *      Author: colman
- */
 #include "RoboticMap.h"
 #include "lodepng.h"
 #include "GridMap.h"

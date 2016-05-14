@@ -1,10 +1,3 @@
-/*
- * AStar.h
- *
- *  Created on: May 11, 2016
- *      Author: user
- */
-
 #ifndef ASTAR_H_
 #define ASTAR_H_
 
@@ -29,4 +22,4 @@ public:
 	vector<Node*> ReconstuctPath(Node* c);
 };
 
-#endif /* ASTAR_H_ */
+#endif

@@ -1,9 +1,3 @@
-/*
- * Graph.h
- *
- *  Created on: May 11, 2016
- *      Author: user
- */
 #include <iostream>
 #include <list>
 #include <vector>
@@ -36,4 +30,4 @@ public:
 	bool IsNodesHasEdge(int n1, int n2);
 };
 
-#endif /* GRAPH_H_ */
+#endif

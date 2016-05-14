@@ -1,10 +1,3 @@
-/*
- * Cell.cpp
- *
- *  Created on: May 11, 2016
- *      Author: user
- */
-
 #include "Cell.h"
 
 Cell::Cell(){

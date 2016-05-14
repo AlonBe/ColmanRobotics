@@ -20,4 +20,4 @@ public:
 
 };
 
-#endif /* GRIDMAP_H_ */
+#endif
